@@ -13,7 +13,7 @@ pydantic==2.7.4
 
 # BigQuery
 google-cloud-bigquery==3.25.0
-google-oauth2-httplib2==0.2.0
+google-auth-httplib2==0.2.0
 
 # dbt
 dbt-bigquery==1.8.1

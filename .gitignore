@@ -1,0 +1,5 @@
+.env
+*.pkl
+gcp_keys.json
+__pycache__/
+.ipynb_checkpoints/

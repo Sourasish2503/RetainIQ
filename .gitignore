@@ -1,5 +1,38 @@
+# Secrets
 .env
-*.pkl
 gcp_keys.json
+
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter
 .ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ML Models
+*.pkl
+*.joblib
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# dbt
+logs/
+target/
+dbt_packages/
+
+# Power BI
+*.pbix

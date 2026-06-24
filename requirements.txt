@@ -1,11 +1,23 @@
-fastapi
-uvicorn
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-google-cloud-bigquery
-python-dotenv
-joblib
-dbt-bigquerytouch
+# Data & ML
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.0
+matplotlib==3.9.0
+seaborn==0.13.2
+joblib==1.4.2
+
+# API
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.4
+
+# BigQuery
+google-cloud-bigquery==3.25.0
+google-oauth2-httplib2==0.2.0
+
+# dbt
+dbt-bigquery==1.8.1
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.32.3

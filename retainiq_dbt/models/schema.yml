@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned and typed customer records from raw BigQuery ingestion."
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: monthly_charges
+        description: "Monthly bill amount in USD"
+        tests:
+          - not_null
+      - name: is_churned
+        description: "Target variable: 1 = churned, 0 = retained"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+
+  - name: int_engagement_metrics
+    description: "RFM-style engagement features engineered using window functions."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: service_count
+        description: "Number of add-on services subscribed (0-7)"
+
+  - name: fct_churn_features
+    description: "Final ML-ready feature table used by Power BI and model validation."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: risk_tier
+        tests:
+          - accepted_values:
+              values: ['High', 'Medium', 'Low']

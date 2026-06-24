@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+google-cloud-bigquery
+python-dotenv
+joblib
+dbt-bigquerytouch
